@@ -2,6 +2,7 @@ package lanterns.blocks;
 
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -47,9 +48,39 @@ public class BlockBlazeLantern extends BlockDirectional {
 	      else if (metadata == 1 && side == 4) return this.faceIcon;
 	      else return this.blockIcon;
 	}
-	   public void onBlockPlacedBy(World par1World, int x, int y, int z, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
-	    {
-	        int whichDirectionFacing = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
-	        par1World.setBlockMetadataWithNotify(x, y, z, whichDirectionFacing, 2);
-	    }
+	
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack)
+	{
+	   int whichDirectionFacing = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+	   world.setBlockMetadataWithNotify(x, y, z, whichDirectionFacing, 2);
+	   this.updateBlock(world, x, y, z);
+	}
+	   
+	@Override
+	public void onNeighborBlockChange(World world, int x, int y, int z, int par5)
+    {
+        if (!world.isRemote)
+        {
+            this.updateBlock(world, x, y, z);
+        }
+    }
+	
+	@Override
+	public void onBlockAdded(World world, int x, int y, int z)
+    {
+        if (!world.isRemote)
+        {
+            this.updateBlock(world, x, y, z);
+        }
+    }
+	
+	public void updateBlock(World world, int x, int y, int z){
+		boolean state = world.isBlockIndirectlyGettingPowered(x, y, z);
+		if(!world.isRemote && state){
+			Minecraft.getMinecraft().sndManager.playSound("mob.blaze.hit", (float)x, (float)y, (float)z, (float)1, (float)1);
+		}
+	}
+	
+	
+	
 }
