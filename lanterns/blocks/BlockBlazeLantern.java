@@ -103,7 +103,11 @@ public class BlockBlazeLantern extends BlockDirectional {
 					(float) x, (float) y, (float) z, (float) 1, (float) 1);
 			isInactive = 1;
 			this.updateBlock(world, x, y, z);
+		} else if (!world.isRemote && !state) {
+			isInactive = 2;
+			this.updateBlock(world, x, y, z);
 		}
+
 	}
 
 }
