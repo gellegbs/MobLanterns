@@ -21,6 +21,7 @@ public class Blocks {
 	public static Block magmacubelantern;
 	public static Block witherskeletonlantern;
 	public static Block ghastlantern;
+	public static Block zspawn;
 
 	public static void init() {
 
@@ -72,6 +73,9 @@ public class Blocks {
 		ghastlantern = new BlockGhastLantern(BlockIds.GHAST_ID,
 				Material.pumpkin);
 		GameRegistry.registerBlock(ghastlantern, BlockIds.GHAST_KEY);
+
+		zspawn = new BlockZSpawn(BlockIds.ZSPAWN_ID, Material.rock);
+		GameRegistry.registerBlock(zspawn, BlockIds.ZSPAWN_KEY);
 	}
 
 	public static void addNames() {
@@ -88,6 +92,7 @@ public class Blocks {
 		LanguageRegistry.addName(witherskeletonlantern,
 				BlockIds.WITHERSKELE_NAME);
 		LanguageRegistry.addName(ghastlantern, BlockIds.GHAST_NAME);
+		LanguageRegistry.addName(zspawn, BlockIds.ZSPAWN_NAME);
 	}
 
 	public static void recipes() {
@@ -126,6 +131,7 @@ public class Blocks {
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ghastlantern),
 				new ItemStack(Block.pumpkinLantern), new ItemStack(
 						Item.ghastTear));
+
 	}
 
 }

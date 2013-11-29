@@ -136,4 +136,11 @@ public class BlockIds {
 	public static final String GHASTFRONT = "ghast_front";
 	public static final String GHASTSIDEACTIVE = "ghast_active";
 
+	// zombie spawn block
+	public static int ZSPAWN_ID;
+	public static final int ZSPAWN_DEFAULT = 1012;
+	public static final String ZSPAWN_UNLOCALIZED_NAME = "zspawn";
+	public static final String ZSPAWN_KEY = "zspawn";
+	public static final String ZSPAWN_NAME = "Zombie Spawn Block";
+	public static final String ZSPAWN_TEXTURE = "z_spawn";
 }
