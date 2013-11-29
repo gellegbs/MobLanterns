@@ -23,6 +23,7 @@ public class BlockIds {
 	public static final String CREEPERTOP = "creeper_top";
 	public static final String CREEPERSIDE = "creeper_side";
 	public static final String CREEPERFRONT = "creeper_front";
+	public static final String CREEPERSIDEACTIVE = "creeper_active";
 
 	// ZOMBIE lantern
 	public static int ZOMBIE_ID;
@@ -33,7 +34,7 @@ public class BlockIds {
 	public static final String ZOMBIETOP = "zombie_top";
 	public static final String ZOMBIESIDE = "zombie_side";
 	public static final String ZOMBIEFRONT = "zombie_front";
-	public static final String ZOMBIESIDEACTIVE = null;
+	public static final String ZOMBIESIDEACTIVE = "zombie_active";
 
 	// skeleton lantern
 
@@ -45,6 +46,7 @@ public class BlockIds {
 	public static final String SKELETONTOP = "skeleton_top";
 	public static final String SKELETONSIDE = "skeleton_side";
 	public static final String SKELETONFRONT = "skeleton_front";
+	public static final String SKELETONSIDEACTIVE = "skeleton_active";
 
 	// spider lantern
 	public static int SPIDER_ID;
@@ -55,7 +57,7 @@ public class BlockIds {
 	public static final String SPIDERTOP = "spider_top";
 	public static final String SPIDERSIDE = "spider_side";
 	public static final String SPIDERFRONT = "spider_front";
-	public static final String SPIDERSIDEACTIVE = null;
+	public static final String SPIDERSIDEACTIVE = "spider_active";
 
 	// SLIME lantern
 	public static int SLIME_ID;
@@ -66,6 +68,7 @@ public class BlockIds {
 	public static final String SLIMETOP = "slime_top";
 	public static final String SLIMESIDE = "slime_side";
 	public static final String SLIMEFRONT = "slime_front";
+	public static final String SLIMESIDEACTIVE = "slime_active";
 
 	// endermen lantern
 	public static int ENDERMEN_ID;
@@ -76,6 +79,7 @@ public class BlockIds {
 	public static final String ENDERMENTOP = "endermen_top";
 	public static final String ENDERMENSIDE = "endermen_side";
 	public static final String ENDERMENFRONT = "endermen_front";
+	public static final String ENDERMENSIDEACTIVE = "endermen_active";
 
 	// pigmen lantern
 	public static int PIGMEN_ID;
@@ -86,6 +90,7 @@ public class BlockIds {
 	public static final String PIGMENTOP = "pigmen_top";
 	public static final String PIGMENSIDE = "pigmen_side";
 	public static final String PIGMENFRONT = "pigmen_front";
+	public static final String PIGMENSIDEACTIVE = "pigmen_active";
 
 	// blaze lantern
 	public static int BLAZE_ID;
@@ -96,7 +101,7 @@ public class BlockIds {
 	public static final String BLAZETOP = "blaze_top";
 	public static final String BLAZESIDE = "blaze_side";
 	public static final String BLAZEFRONT = "blaze_front";
-	public static final String BLAZESIDEACTIVE = null;
+	public static final String BLAZESIDEACTIVE = "blaze_active";
 
 	// magma cube lantern
 	public static int MAGMA_ID;
@@ -107,6 +112,7 @@ public class BlockIds {
 	public static final String MAGMATOP = "magmacube_top";
 	public static final String MAGMASIDE = "magmacube_side";
 	public static final String MAGMAFRONT = "magmacube_front";
+	public static final String MAGMASIDEACTIVE = "magmacube_active";
 
 	// wither skeleton lantern
 	public static int WITHERSKELE_ID;
@@ -117,6 +123,7 @@ public class BlockIds {
 	public static final String WITHERSKELETOP = "witherskeleton_top";
 	public static final String WITHERSKELESIDE = "witherskeleton_side";
 	public static final String WITHERSKELEFRONT = "witherskeleton_front";
+	public static final String WITHERSKELESIDEACTIVE = "witherskeleton_active";
 
 	// ghast lantern
 	public static int GHAST_ID;
@@ -127,5 +134,6 @@ public class BlockIds {
 	public static final String GHASTTOP = "ghast_top";
 	public static final String GHASTSIDE = "ghast_side";
 	public static final String GHASTFRONT = "ghast_front";
+	public static final String GHASTSIDEACTIVE = "ghast_active";
 
 }

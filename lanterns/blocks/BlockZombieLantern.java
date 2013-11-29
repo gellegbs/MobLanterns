@@ -44,35 +44,34 @@ public class BlockZombieLantern extends BlockDirectional {
 				+ BlockIds.ZOMBIESIDEACTIVE);
 	}
 
-	public double isInactive = 2;
+	public double isActive = 2;
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public Icon getIcon(int side, int metadata) {
-		if (side == 1 && isInactive == 2)
+		if (side == 1)
 			return this.topIcon;
 		else if (side == 0)
 			return this.topIcon;
-		else if (metadata == 2 && side == 2)
+		else if (metadata == 2 && side == 2 && isActive == 2)
 			return this.faceIcon;
-		else if (metadata == 3 && side == 5)
+		else if (metadata == 3 && side == 5 && isActive == 2)
 			return this.faceIcon;
-		else if (metadata == 0 && side == 3)
+		else if (metadata == 0 && side == 3 && isActive == 2)
 			return this.faceIcon;
-		else if (metadata == 1 && side == 4)
+		else if (metadata == 1 && side == 4 && isActive == 2)
 			return this.faceIcon;
-		else if (metadata == 2 && side == 2 && isInactive == 1)
+		else if (metadata == 2 && side == 2 && isActive == 1)
 			return this.activeFaceIcon;
-		else if (metadata == 3 && side == 5 && isInactive == 1)
+		else if (metadata == 3 && side == 5 && isActive == 1)
 			return this.activeFaceIcon;
-		else if (metadata == 0 && side == 3 && isInactive == 1)
+		else if (metadata == 0 && side == 3 && isActive == 1)
 			return this.activeFaceIcon;
-		else if (metadata == 1 && side == 4 && isInactive == 1)
+		else if (metadata == 1 && side == 4 && isActive == 1)
 			return this.activeFaceIcon;
 
 		else
 			return this.blockIcon;
-
 	}
 
 	public void onBlockPlacedBy(World par1World, int x, int y, int z,
@@ -101,7 +100,10 @@ public class BlockZombieLantern extends BlockDirectional {
 		if (!world.isRemote && state) {
 			Minecraft.getMinecraft().sndManager.playSound("mob.zombie.say",
 					(float) x, (float) y, (float) z, (float) 1, (float) 1);
-			isInactive = 1;
+			isActive = 1;
+
+		} else if (!world.isRemote && !state) {
+			isActive = 2;
 		}
 	}
 }
