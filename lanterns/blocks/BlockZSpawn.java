@@ -4,10 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
 import net.minecraft.util.Icon;
-import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -20,34 +17,29 @@ public class BlockZSpawn extends Block {
 	}
 
 	@SideOnly(Side.CLIENT)
-	private Icon icon;
+	private Icon zicon;
 
 	@Override
 	public void registerIcons(IconRegister register) {
-		icon = register.registerIcon(BlockIds.TEXTURE_LOCATION + ":"
+		zicon = register.registerIcon(BlockIds.TEXTURE_LOCATION + ":"
 				+ BlockIds.ZSPAWN_TEXTURE);
-	}
 
-	@Override
-	public void onNeighborBlockChange(World world, int x, int y, int z, int par5) {
-		if (!world.isRemote) {
-			this.updateBlock(world, x, y, z);
-		}
 	}
-
-	@Override
-	public void onBlockAdded(World world, int x, int y, int z) {
-		if (!world.isRemote) {
-			this.updateBlock(world, x, y, z);
-		}
-	}
-
-	public void updateBlock(World world, int x, int y, int z) {
-		boolean state = world.isBlockIndirectlyGettingPowered(x, y, z);
-		if (!world.isRemote && state) {
-			Entity entity = EntityList.createEntityByID(54, world);
-
-		}
-	}
+	/*
+	 * @Override public void onNeighborBlockChange(World world, int x, int y,
+	 * int z, int par5) { if (!world.isRemote) { this.updateBlock(world, x, y,
+	 * z); } }
+	 * 
+	 * @Override public void onBlockAdded(World world, int x, int y, int z) { if
+	 * (!world.isRemote) { this.updateBlock(world, x, y, z); } }
+	 * 
+	 * public void updateBlock(World world, int x, int y, int z) {
+	 * 
+	 * boolean state = world.isBlockIndirectlyGettingPowered(x, y, z); if
+	 * (!world.isRemote && state) { ; Entity entity =
+	 * EntityList.createEntityByID(54, world);
+	 * 
+	 * } }
+	 */
 
 }
