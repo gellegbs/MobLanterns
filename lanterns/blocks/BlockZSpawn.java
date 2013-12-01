@@ -16,12 +16,9 @@ public class BlockZSpawn extends Block {
 		this.setUnlocalizedName(BlockIds.ZSPAWN_UNLOCALIZED_NAME);
 	}
 
-	@SideOnly(Side.CLIENT)
-	private Icon zicon;
-
 	@Override
 	public void registerIcons(IconRegister register) {
-		zicon = register.registerIcon(BlockIds.TEXTURE_LOCATION + ":"
+		blockIcon = register.registerIcon(BlockIds.TEXTURE_LOCATION + ":"
 				+ BlockIds.ZSPAWN_TEXTURE);
 
 	}
