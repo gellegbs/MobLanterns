@@ -8,6 +8,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.ID, name = Reference.NAME, version = Reference.VERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -24,6 +25,8 @@ public class Lanterns {
 		Blocks.init();
 		Blocks.addNames();
 		Blocks.recipes();
+		
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabMobLanterns", "en_US", "MobLanterns");
 	}
 
 	public static CreativeTabs tabMobLanterns = new CreativeTabs("tabMobLanterns") {
