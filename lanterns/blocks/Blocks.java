@@ -25,53 +25,41 @@ public class Blocks {
 
 	public static void init() {
 
-		jackolantern = new BlockJackolantern(BlockIds.JACOLANTERN_ID,
-				Material.pumpkin);
+		jackolantern = new BlockMobLantern(BlockIds.JACKOLANTERN_ID, LanternType.JACKO);
 		GameRegistry.registerBlock(jackolantern, BlockIds.JACKOLANTERN_KEY);
 
-		creeperlantern = new BlockCreeperLantern(BlockIds.CREEPER_ID,
-				Material.pumpkin);
+		creeperlantern = new BlockMobLantern(BlockIds.CREEPER_ID, LanternType.CREEPER);
 		GameRegistry.registerBlock(creeperlantern, (BlockIds.CREEPER_KEY));
 
-		zombielantern = new BlockZombieLantern(BlockIds.ZOMBIE_ID,
-				Material.pumpkin);
+		zombielantern = new BlockMobLantern(BlockIds.ZOMBIE_ID, LanternType.ZOMBIE);
 		GameRegistry.registerBlock(zombielantern, BlockIds.ZOMBIE_KEY);
 
-		skeletonlantern = new BlockSkeletonLantern(BlockIds.SKELETON_ID,
-				Material.pumpkin);
+		skeletonlantern = new BlockMobLantern(BlockIds.SKELETON_ID, LanternType.SKELETON);
 		GameRegistry.registerBlock(skeletonlantern, BlockIds.SKELETON_KEY);
 
-		spiderlantern = new BlockSpiderLantern(BlockIds.SPIDER_ID,
-				Material.pumpkin);
+		spiderlantern = new BlockMobLantern(BlockIds.SPIDER_ID, LanternType.SPIDER);
 		GameRegistry.registerBlock(spiderlantern, BlockIds.SPIDER_KEY);
 
-		slimelantern = new BlockSlimeLantern(BlockIds.SLIME_ID,
-				Material.pumpkin);
+		slimelantern = new BlockMobLantern(BlockIds.SLIME_ID, LanternType.SLIME);
 		GameRegistry.registerBlock(slimelantern, BlockIds.SLIME_KEY);
 
-		endermenlantern = new BlockEndermenLantern(BlockIds.ENDERMEN_ID,
-				Material.pumpkin);
+		endermenlantern = new BlockMobLantern(BlockIds.ENDERMEN_ID, LanternType.ENDERMEN);
 		GameRegistry.registerBlock(endermenlantern, BlockIds.ENDERMEN_KEY);
 
-		pigmenlantern = new BlockPigmenLantern(BlockIds.PIGMEN_ID,
-				Material.pumpkin);
+		pigmenlantern = new BlockMobLantern(BlockIds.PIGMEN_ID, LanternType.PIGMEN);
 		GameRegistry.registerBlock(pigmenlantern, BlockIds.PIGMEN_KEY);
 
-		blazelantern = new BlockBlazeLantern(BlockIds.BLAZE_ID,
-				Material.pumpkin);
+		blazelantern = new BlockMobLantern(BlockIds.BLAZE_ID, LanternType.BLAZE);
 		GameRegistry.registerBlock(blazelantern, BlockIds.BLAZE_KEY);
 
-		magmacubelantern = new BlockMagmaCubeLantern(BlockIds.MAGMA_ID,
-				Material.pumpkin);
+		magmacubelantern = new BlockMobLantern(BlockIds.MAGMA_ID, LanternType.MAGMA_CUBE);
 		GameRegistry.registerBlock(magmacubelantern, BlockIds.MAGMA_KEY);
 
-		witherskeletonlantern = new BlockWitherSkeletonLantern(
-				BlockIds.WITHERSKELE_ID, Material.pumpkin);
+		witherskeletonlantern = new BlockMobLantern(BlockIds.WITHERSKELE_ID, LanternType.WITHER_SKELETON);
 		GameRegistry.registerBlock(witherskeletonlantern,
 				BlockIds.WITHERSKELE_KEY);
 
-		ghastlantern = new BlockGhastLantern(BlockIds.GHAST_ID,
-				Material.pumpkin);
+		ghastlantern = new BlockMobLantern(BlockIds.GHAST_ID, LanternType.GHAST);
 		GameRegistry.registerBlock(ghastlantern, BlockIds.GHAST_KEY);
 
 		zspawn = new BlockZSpawn(BlockIds.ZSPAWN_ID, Material.rock);
