@@ -5,12 +5,12 @@ public class BlockIds {
 	public static final String TEXTURE_LOCATION = "lanterns";
 
 	// jackolantern
-	public static int JACOLANTERN_ID;
+	public static int JACKOLANTERN_ID;
 	public static final int JACKOLANTERN_DEFAULT = 1000;
 	public static final String JACKOLANTERN_UNLOCALIZED_NAME = "jackolantern";
 	public static final String JACKOLANTERN_KEY = "jackolantern";
 	public static final String JACKOLANTERN_NAME = "Jack-O-Lantern";
-	public static final String JACOLANTERNTOP = "jackolantern1";
+	public static final String JACKOLANTERNTOP = "jackolantern1";
 	public static final String JACKOLANTERNSIDE = "jackolantern2";
 	public static final String JACKOLANTERNFRONT = "jackolantern0";
 

@@ -19,7 +19,7 @@ public class ConfigHandler {
 				BlockIds.ENDERMEN_DEFAULT).getInt();
 		BlockIds.GHAST_ID = config.getBlock(BlockIds.GHAST_KEY,
 				BlockIds.GHAST_DEFAULT).getInt();
-		BlockIds.JACOLANTERN_ID = config.getBlock(BlockIds.JACKOLANTERN_KEY,
+		BlockIds.JACKOLANTERN_ID = config.getBlock(BlockIds.JACKOLANTERN_KEY,
 				BlockIds.JACKOLANTERN_DEFAULT).getInt();
 		BlockIds.MAGMA_ID = config.getBlock(BlockIds.MAGMA_KEY,
 				BlockIds.MAGMA_DEFAULT).getInt();
