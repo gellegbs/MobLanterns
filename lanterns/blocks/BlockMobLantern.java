@@ -15,9 +15,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockMobLantern extends BlockDirectional {
 	
-	private LanternType type;
+	private BlockType type;
 
-	public BlockMobLantern(int id, LanternType type) {
+	public BlockMobLantern(int id, BlockType type) {
 		super(id, Material.pumpkin);
 		this.type = type;
 		this.setCreativeTab(Lanterns.tabMobLanterns);

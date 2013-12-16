@@ -25,11 +25,13 @@ public class Lanterns {
 		Blocks.init();
 		Blocks.addNames();
 		Blocks.recipes();
-		
-		LanguageRegistry.instance().addStringLocalization("itemGroup.tabMobLanterns", "en_US", "MobLanterns");
+		Blocks.registerTileEntities();
+		LanguageRegistry.instance().addStringLocalization(
+				"itemGroup.tabMobLanterns", "en_US", "MobLanterns");
 	}
 
-	public static CreativeTabs tabMobLanterns = new CreativeTabs("tabMobLanterns") {
+	public static CreativeTabs tabMobLanterns = new CreativeTabs(
+			"tabMobLanterns") {
 		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(Blocks.skeletonlantern);

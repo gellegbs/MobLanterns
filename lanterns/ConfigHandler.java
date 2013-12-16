@@ -37,6 +37,8 @@ public class ConfigHandler {
 				BlockIds.ZOMBIE_DEFAULT).getInt();
 		BlockIds.ZSPAWN_ID = config.getBlock(BlockIds.ZSPAWN_KEY,
 				BlockIds.ZSPAWN_DEFAULT).getInt();
+		BlockIds.SPAWN_STONE_ID = config.getBlock(BlockIds.SPAWN_STONE_KEY,
+				BlockIds.SPAWN_STONE_DEFAULT).getInt();
 
 		config.save();
 	}
