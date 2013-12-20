@@ -69,15 +69,15 @@ public enum BlockType {
             BlockIds.SPIDERSPAWNSIDE, BlockIds.SPIDERSPAWNSIDE, 52),
 
     WITHERSKELESPAWN(BlockIds.WITHERSKELESPAWN_UNLOCALIZED_NAME, null, BlockIds.WITHERSKELESPAWNTOP,
-            BlockIds.WITHERSKELESPAWNSIDE, BlockIds.WITHERSKELESPAWNSIDE, BlockIds.WITHERSKELESPAWNSIDE, 51:1),
+            BlockIds.WITHERSKELESPAWNSIDE, BlockIds.WITHERSKELESPAWNSIDE, BlockIds.WITHERSKELESPAWNSIDE, 51),
 
     ZOMBIESPAWN(BlockIds.ZSPAWN_UNLOCALIZED_NAME, null, BlockIds.ZSPAWNTOP, BlockIds.ZSPAWNSIDE, BlockIds.ZSPAWNSIDE,
-            BlockIds.ZSPAWNSIDE, 54);
+            BlockIds.ZSPAWNSIDE, 54), 
 
     // Tile Entities
-   
+
     public final String unlocalizedName, sound, textureTop, textureFront, textureSide, textureSideActive;
-    public final int spawnerid;
+    public int spawnerid;
 
     BlockType(String unlocalizedName, String sound, String textureTop, String textureFront, String textureSide,
             String textureSideActive, int spawnerid) {
@@ -87,7 +87,6 @@ public enum BlockType {
         this.textureFront = textureFront;
         this.textureSide = textureSide;
         this.textureSideActive = textureSideActive;
-      
-        this.spawnerid = spawnerid;
+        
     }
 }

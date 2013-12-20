@@ -77,7 +77,7 @@ public class BlockSpawner extends BlockContainer {
     }
 
     // spawner stuff
-    private final int maxUses = 100;
+    private int maxUses = 100;
 
     public void updateBlock(World world, int x, int y, int z, int currentMeta) {
         if (!world.isRemote) {
@@ -86,14 +86,15 @@ public class BlockSpawner extends BlockContainer {
 
             if (redstoneSignal) {
                 if (!isActive) {
-                    if (type.spawner != null) {
+                    if (type.spawnerid != 0 && maxUses != 0) {
                         EntityList.createEntityByID(BlockType.spawnerid, world);
+                        maxUses--;
                     }
                     currentMeta = (currentMeta & 7) + 8;
                     world.setBlockMetadataWithNotify(x, y, z, currentMeta, 2);
                 }
             } else {
-                if (isActive) {
+                if (isActive || maxUses == 0) {
                     world.setBlockMetadataWithNotify(x, y, z, (currentMeta & 7), 2);
                 }
             }
